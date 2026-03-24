@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
-project(TestOscpack)
+project(Oscpack)
 set(CMAKE_CXX_STANDARD 14)
 
-set(OSCPACK_BUILD_EXAMPLES ON CACHE BOOL "Should we build examples")
+set(OSCPACK_BUILD_EXAMPLES OFF CACHE BOOL "Should we build examples")
 
 set(CMAKE_INCLUDE_CURRENT_DIR 1)
 set(CMAKE_POSITION_INDEPENDENT_CODE 1)
@@ -17,7 +17,7 @@ add_library(oscpack INTERFACE)
 
 include_directories(oscpack)
 
-target_include_directories(oscpack INTERFACE .)
+target_include_directories(oscpack INTERFACE . ./oscpack)
 if(WIN32)
   target_link_libraries(oscpack INTERFACE ws2_32 winmm)
 endif()
