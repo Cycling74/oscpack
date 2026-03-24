@@ -249,7 +249,7 @@ public:
 
       messageCursor_ = BeginElement( messageCursor_ );
 
-      std::strncpy( messageCursor_, rhs.addressPattern.data(), rhs.addressPattern.size() );
+      std::memcpy(messageCursor_, rhs.addressPattern.data(), rhs.addressPattern.size());
 
       messageCursor_ += rhs.addressPattern.size();
       *messageCursor_++ = '\0';
