@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 2.6)
-project(Oscpack)
+cmake_minimum_required(VERSION 3.1...3.31)
+project(Oscpack VERSION 1.1.0)
 set(CMAKE_CXX_STANDARD 14)
 
 set(OSCPACK_BUILD_EXAMPLES OFF CACHE BOOL "Should we build examples")
